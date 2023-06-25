@@ -15,8 +15,8 @@ public class CarServiceImp implements CarService {
 
 
     @Override
-    public List<Car> getCount(List<Car> cars, int count) {
-        return cars.stream().limit(count).toList();
+    public List<Car> getCount(int count) {
+        return carDao.getListCar().stream().limit(count).toList();
     }
 
     @Override

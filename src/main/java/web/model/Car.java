@@ -1,5 +1,8 @@
 package web.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Car {
     private String color;
     private String model;
@@ -35,6 +38,9 @@ public class Car {
 
     public void setSerials(Long serials) {
         this.serials = serials;
+    }
+    public Car createCar(String color, String model, Long serials) {
+        return new Car(color, model, serials);
     }
 
     @Override
